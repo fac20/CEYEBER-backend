@@ -3,10 +3,19 @@ const app = express();
 const createUser = require('./handlers/users');
 const sendAnswers = require('./handlers/challenges');
 const sendSkills = require('./handlers/skills');
+const cors = require('cors');
 
 require('dotenv').config();
 
 const PORT = process.env.PORT || 4000;
+
+const corsOptions = {
+  origin: 'ceyeber.netlify.app/',
+  optionsSuccessStatus: 200
+};
+
+app.use(express.json());
+app.use(cors());
 
 app.get('/', function (req, res) {
   res.send('Hello');
