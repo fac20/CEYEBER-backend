@@ -3,9 +3,9 @@ const env = require('dotenv');
 
 env.config();
 
-const options {
-    connectionString: process.env.DATABASE_URL
-}
+const options = {
+  connectionString: process.env.DATABASE_URL
+};
 
 const database = new pg.Pool(options);
 
