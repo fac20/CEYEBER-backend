@@ -8,7 +8,7 @@ CREATE TABLE users (
     age INTEGER NOT NULL,
     location VARCHAR(255) NOT NULL,
     created_at TIMESTAMPTZ NOT NULL
-)
+);
 
 CREATE TABLE skills (
     id SERIAL PRIMARY KEY,
@@ -20,7 +20,7 @@ CREATE TABLE skills (
     twitter INTEGER,
     whatsApp INTEGER,
     youtube INTEGER
-)
+);
 
 CREATE TABLE challenges (
     id SERIAL PRIMARY KEY,
@@ -31,6 +31,6 @@ CREATE TABLE challenges (
     q2a2 INTEGER,
     q3a1 INTEGER,
     q3a2 INTEGER
-)
+);
 
 COMMIT;
