@@ -20,9 +20,10 @@ const sendSkills = (req, res, next) => {
     whatsApp,
     youtube
   )
-    .then(() => {
+    .then(skills => {
       res.status(201).send({
-        message: 'skills sent'
+        message: 'skills sent',
+        skills: skills
       });
     })
     .catch(next);
