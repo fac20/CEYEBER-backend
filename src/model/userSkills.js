@@ -1,6 +1,6 @@
 const db = require('../database/connection');
 
-const sendSkills = (
+const createSkills = (
   user_id,
   facebook,
   instagram,
@@ -28,4 +28,4 @@ const sendSkills = (
     .catch(err => err);
 };
 
-module.exports = sendSkills;
+module.exports = createSkills;
