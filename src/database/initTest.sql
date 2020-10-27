@@ -13,13 +13,13 @@ CREATE TABLE users (
 CREATE TABLE skills (
     id SERIAL PRIMARY KEY,
     user_id INTEGER REFERENCES users(id),
-    facebook INTEGER,
-    instagram INTEGER,
-    snapchat INTEGER,
-    tiktok INTEGER,
-    twitter INTEGER,
-    whatsApp INTEGER,
-    youtube INTEGER
+    facebook INTEGER NOT NULL,
+    instagram INTEGER NOT NULL,
+    snapchat INTEGER NOT NULL,
+    tiktok INTEGER NOT NULL,
+    twitter INTEGER NOT NULL,
+    whatsApp INTEGER NOT NULL,
+    youtube INTEGER NOT NULL
 );
 
 CREATE TABLE challenges (

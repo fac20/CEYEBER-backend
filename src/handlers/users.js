@@ -7,9 +7,10 @@ const createUser = (req, res, next) => {
   const created_at = req.body.created_at;
 
   user(alias, age, location, created_at)
-    .then(() => {
+    .then(user => {
       res.status(201).send({
-        message: 'user created'
+        message: 'user created',
+        id: user.id
       });
     })
     .catch(next);
