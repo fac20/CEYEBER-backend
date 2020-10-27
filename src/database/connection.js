@@ -4,7 +4,8 @@ const env = require('dotenv');
 env.config();
 
 const options = {
-  connectionString: process.env.DATABASE_URL
+  connectionString: process.env.DATABASE_URL,
+  ssl: { rejectUnauthorized: false }
 };
 
 const database = new pg.Pool(options);
