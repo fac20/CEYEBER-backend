@@ -1,4 +1,4 @@
-const userSkills = require('../model/userSkills');
+const createSkills = require('../model/userSkills');
 
 const sendSkills = (req, res, next) => {
   const user_id = req.body.user_id;
@@ -10,7 +10,7 @@ const sendSkills = (req, res, next) => {
   const whatsApp = req.body.whatsApp;
   const youtube = req.body.youtube;
 
-  userSkills(
+  createSkills(
     user_id,
     facebook,
     instagram,
