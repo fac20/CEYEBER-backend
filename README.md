@@ -13,6 +13,10 @@ backend for CEYEBER critical thinking game
 
 ## Schema
 
+[DB diagram](https://dbdiagram.io/d/5f96fcf03a78976d7b7938f5)
+
+![image](https://user-images.githubusercontent.com/48697281/97202151-26a31300-17ab-11eb-83fb-5f9208a2ac81.png)
+
 ## Authors
 
 ```
