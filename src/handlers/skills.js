@@ -1,14 +1,14 @@
 const userSkills = require('../model/userSkills');
 
 const sendSkills = (req, res, next) => {
-  const user_id = req.user_id;
-  const facebook = req.facebook;
-  const instagram = req.instagram;
-  const snapchat = req.snapchat;
-  const tiktok = req.tiktok;
-  const twitter = req.twitter;
-  const whatsApp = req.whatsApp;
-  const youtube = req.youtube;
+  const user_id = req.body.user_id;
+  const facebook = req.body.facebook;
+  const instagram = req.body.instagram;
+  const snapchat = req.body.snapchat;
+  const tiktok = req.body.tiktok;
+  const twitter = req.body.twitter;
+  const whatsApp = req.body.whatsApp;
+  const youtube = req.body.youtube;
 
   userSkills(
     user_id,
