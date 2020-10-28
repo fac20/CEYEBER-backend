@@ -2,12 +2,13 @@ BEGIN;
 
 DROP TABLE IF EXISTS users, skills, challenges CASCADE;
 
+-- add date in here
 CREATE TABLE users (
     id SERIAL PRIMARY KEY,
     alias VARCHAR(30) NOT NULL,
     age INTEGER NOT NULL,
     location VARCHAR(255) NOT NULL,
-    created_at TIMESTAMPTZ NOT NULL
+    created_at DATE DEFAULT CURRENT_DATE
 );
 
 CREATE TABLE skills (
