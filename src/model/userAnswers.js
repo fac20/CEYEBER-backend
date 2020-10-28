@@ -10,4 +10,13 @@ const sendAnswers = (user_id, q1a1, q1a2, q2a1, q2a2, q3a1, q3a2) => {
     .catch(error => error);
 };
 
-module.exports = sendAnswers;
+const getAnswers = user_id => {
+  return db
+    .query('SELECT * FROM challengers WHERE user_id = ($1)', [user_id])
+    .then(res => {
+      return res.rows[0];
+    })
+    .catch(error => error);
+};
+
+module.exports = { sendAnswers, getAnswers };

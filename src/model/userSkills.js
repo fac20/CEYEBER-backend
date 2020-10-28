@@ -28,4 +28,13 @@ const createSkills = (
     .catch(err => err);
 };
 
-module.exports = createSkills;
+const getSkills = user_id => {
+  return db
+    .query('SELECT * FROM skills WHERE user_id = ($1)', [user_id])
+    .then(res => {
+      return res.rows[0];
+    })
+    .catch(error => error);
+};
+
+module.exports = { createSkills, getSkills };

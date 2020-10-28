@@ -1,9 +1,9 @@
 const test = require('tape');
 const supertest = require('supertest');
-const server = require('./../server');
-const usersHandlers = require('./../handlers/users');
-const skillsHandlers = require('./../handlers/skills');
-const challengesHandlers = require('./../handlers/challenges');
+const server = require('../server');
+// const usersHandlers = require('./../handlers/users');
+// const skillsHandlers = require('./../handlers/skills');
+// const challengesHandlers = require('./../handlers/challenges');
 
 test('Sanity check', t => {
   let num = 2;
