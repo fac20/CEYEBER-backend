@@ -11,4 +11,13 @@ const sendUserInfo = (alias, age, location) => {
     .then(res => res.rows[0]);
 };
 
-module.exports = sendUserInfo;
+const getUser = username => {
+  return db
+    .query('SELECT * FROM users WHERE username = ($1)', [username])
+    .then(user => {
+      return user.rows[0];
+    })
+    .catch(error => error);
+};
+
+module.exports = { sendUserInfo, getUser };
