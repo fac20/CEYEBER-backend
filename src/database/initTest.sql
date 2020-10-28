@@ -34,8 +34,8 @@ CREATE TABLE challenges (
 );
 
 INSERT INTO users(alias, age, location, created_at) VALUES
-    ('BrownFox', '8', 'United Kingdom', current_timestamp),
-    ('RedPanda', '10', 'Sweden', current_timestamp);
+    ('BrownFox', '8', 'United Kingdom'),
+    ('RedPanda', '10', 'Sweden');
 
 INSERT INTO skills (user_id, facebook, instagram, snapchat, tiktok, twitter, whatsApp, youtube) VALUES
     ('1', '0', '4', '4', '4', '3', '3', '4'),
