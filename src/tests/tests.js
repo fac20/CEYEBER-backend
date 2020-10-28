@@ -15,7 +15,7 @@ test('get home route returns 200 status code', t => {
   supertest(server)
     .get('/')
     .expect(200)
-    .expect('content-type', 'text/plain')
+    .expect('content-type', 'text/html; charset=utf-8')
     .end((err, res) => {
       t.error(err);
       t.equal(res.text, 'Hello');
