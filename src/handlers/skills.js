@@ -1,4 +1,4 @@
-const createSkills = require('../model/userSkills');
+const { createSkills } = require('../model/userSkills');
 
 const sendSkills = (req, res, next) => {
   const user_id = req.body.user_id;
@@ -7,7 +7,7 @@ const sendSkills = (req, res, next) => {
   const snapchat = req.body.snapchat;
   const tiktok = req.body.tiktok;
   const twitter = req.body.twitter;
-  const whatsApp = req.body.whatsApp;
+  const whatsapp = req.body.whatsapp;
   const youtube = req.body.youtube;
 
   createSkills(
@@ -17,7 +17,7 @@ const sendSkills = (req, res, next) => {
     snapchat,
     tiktok,
     twitter,
-    whatsApp,
+    whatsapp,
     youtube
   )
     .then(skills => {
