@@ -22,3 +22,25 @@ test('get home route returns 200 status code', t => {
       t.end();
     });
 });
+
+test('Post to user route with conflicting username returns 409 status code', t => {
+  const duplicateUser = {
+    agent: 'TestFox',
+    age: 14,
+    location: 'Spain'
+  };
+
+  supertest(server)
+    .post('/user')
+    .send(duplicateUser)
+    .expect(409)
+    .expect('Content-Type', 'application/json; charset=utf-8')
+    .end((err, res) => {
+      t.error(err);
+      t.equal(
+        res.body.message,
+        'Someone already picked this agent name! Pick another'
+      );
+      t.end();
+    });
+});
