@@ -1,4 +1,4 @@
-const userAnswers = require('../model/userAnswers');
+const {userAnswers} = require('../model/userAnswers');
 
 const sendAnswers = (req, res, next) => {
   const user_id = req.body.user_id;
