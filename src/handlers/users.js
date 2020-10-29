@@ -8,7 +8,7 @@ const createUser = (req, res, next) => {
 getUser(agent)
 .then(user => {
   if (user) {
-    res.status(409).send('<h1>Username already in database</h1>');
+    res.status(409).send({message: 'username already in database'});
   }
   else {
     sendUserInfo(agent, age, location)
