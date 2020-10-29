@@ -1,11 +1,11 @@
 const user = require('../model/userInfo');
 
 const createUser = (req, res, next) => {
-  const alias = req.body.alias;
+  const agent = req.body.agent;
   const age = req.body.age;
   const location = req.body.location;
 
-  user(alias, age, location, created_at)
+  user(agent, age, location, created_at)
     .then(user => {
       res.status(201).send({
         message: 'user created',
