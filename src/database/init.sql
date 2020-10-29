@@ -19,7 +19,7 @@ CREATE TABLE skills (
     snapchat INTEGER,
     tiktok INTEGER,
     twitter INTEGER,
-    whatsApp INTEGER,
+    whatsapp INTEGER,
     youtube INTEGER
 );
 
