@@ -11,13 +11,12 @@ const sendUserInfo = (agent, age, location) => {
     .then(res => res.rows[0]);
 };
 
-const getUser = username => {
+const getUser = agent => {
   return db
-    .query('SELECT * FROM users WHERE username = ($1)', [username])
+    .query('SELECT * FROM users WHERE agent = ($1)', [agent])
     .then(user => {
       return user.rows[0];
     })
-    .catch(error => error);
 };
 
 module.exports = { sendUserInfo, getUser };
