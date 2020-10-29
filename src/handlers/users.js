@@ -1,11 +1,17 @@
-const user = require('../model/userInfo');
+const { sendUserInfo, getUser} = require('../model/userInfo');
 
 const createUser = (req, res, next) => {
-  const alias = req.body.alias;
+  const agent = req.body.agent;
   const age = req.body.age;
   const location = req.body.location;
-
-  user(alias, age, location, created_at)
+// check if user exists
+getUser(agent)
+.then(user => {
+  if (user) {
+    res.status(409).send('<h1>Username already in database</h1>');
+  }
+  else {
+    sendUserInfo(agent, age, location)
     .then(user => {
       res.status(201).send({
         message: 'user created',
@@ -13,6 +19,10 @@ const createUser = (req, res, next) => {
       });
     })
     .catch(next);
+  }
+})
+.catch(next);
+
 };
 
 module.exports = createUser;

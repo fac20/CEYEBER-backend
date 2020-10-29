@@ -4,7 +4,7 @@ DROP TABLE IF EXISTS users, skills, challenges CASCADE;
 
 CREATE TABLE users (
     id SERIAL PRIMARY KEY,
-    alias VARCHAR(30) NOT NULL,
+    agent VARCHAR(30) UNIQUE NOT NULL,
     age INTEGER NOT NULL,
     location VARCHAR(255) NOT NULL,
     created_at DATE DEFAULT CURRENT_DATE
@@ -33,7 +33,7 @@ CREATE TABLE challenges (
     q3a2 INTEGER
 );
 
-INSERT INTO users(alias, age, location, created_at) VALUES
+INSERT INTO users(agent, age, location, created_at) VALUES
     ('TestFox', '8', 'United Kingdom'),
     ('TestPanda', '10', 'Sweden');
 
