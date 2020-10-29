@@ -9,7 +9,7 @@ if (process.env.NODE_ENV == 'test') {
 
 const options = {
   connectionString: process.env.DATABASE_URL,
-  ssl: { rejectUnauthorized: false }
+  // ssl: { rejectUnauthorized: false }
 };
 
 const database = new pg.Pool(options);
