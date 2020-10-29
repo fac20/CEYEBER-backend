@@ -33,7 +33,7 @@ CREATE TABLE challenges (
     q3a2 INTEGER
 );
 
-INSERT INTO users(agent, age, location, created_at) VALUES
+INSERT INTO users(agent, age, location) VALUES
     ('TestFox', '8', 'United Kingdom'),
     ('TestPanda', '10', 'Sweden');
 
