@@ -8,11 +8,11 @@
 
 ## Team Roles
 
-Product Owner: Aqsa
-Scrum Facilitator: Jessica
-Quality: Jennifer
-UX/UI: My Hoa
-DevOps: Rihards
+* Product Owner: Aqsa
+* Scrum Facilitator: Jessica
+* Quality: Jennifer
+* UX/UI: My Hoa
+* DevOps: Rihards
 
 ## Built with
 
